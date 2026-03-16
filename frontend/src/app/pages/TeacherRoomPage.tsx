@@ -728,7 +728,7 @@ function TeacherRoomContent() {
                 <>
                   <div className="flex items-center justify-between">
                     <span style={{ ...IN, fontSize: '13px', color: '#666' }}>Room code</span>
-                    <span style={{ ...SM, fontSize: '12px', fontWeight: 700, background: '#FFD600', border: '2px solid #000', borderRadius: '4px', padding: '2px 8px' }}>
+                    <span style={{ ...SM, fontSize: '12px', fontWeight: 700,color: "#000", background: '#FFD600', border: '2px solid #000', borderRadius: '4px', padding: '2px 8px' }}>
                       {displayRoom.code}
                     </span>
                   </div>
