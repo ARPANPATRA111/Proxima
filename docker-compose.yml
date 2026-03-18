@@ -1,0 +1,24 @@
+services:
+  livekit:
+    image: livekit/livekit-server:latest
+    ports:
+      - "7880:7880"
+      - "7881:7881"
+      - "7882:7882/udp"
+    volumes:
+      - ./livekit.yaml:/livekit.yaml
+    command: --config /livekit.yaml
+    restart: unless-stopped
+
+  backend:
+    build: ./server
+    ports:
+      - "3001:3001"
+    environment:
+      - LIVEKIT_API_KEY=devkey
+      - LIVEKIT_API_SECRET=secret
+      - LIVEKIT_HOST=ws://livekit:7880
+      - PORT=3001
+    depends_on:
+      - livekit
+    restart: unless-stopped
