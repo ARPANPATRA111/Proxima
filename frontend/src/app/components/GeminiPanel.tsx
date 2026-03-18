@@ -104,11 +104,11 @@ const GeminiPanel: React.FC<GeminiPanelProps> = ({ isOpen, onClose }) => {
           style={{
             width: '28px', height: '28px',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            background: '#fff', border: '2px solid #000', borderRadius: '4px',
+            background: '#999', border: '2px solid #000', borderRadius: '4px',
             cursor: 'pointer', boxShadow: '2px 2px 0px #000',
           }}
           onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = '#FF3D57'; }}
-          onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = '#fff'; }}
+          onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = '#999'; }}
         >
           <X size={14} />
         </button>
@@ -138,7 +138,7 @@ const GeminiPanel: React.FC<GeminiPanelProps> = ({ isOpen, onClose }) => {
                     padding: '8px 12px',
                     background: '#fff', border: '2px solid #000',
                     borderRadius: '4px', boxShadow: '2px 2px 0px #000',
-                    cursor: 'pointer', textAlign: 'left',
+                    cursor: 'pointer', textAlign: 'left', color: '#999',
                   }}
                   onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = '#FFD600'; }}
                   onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = '#fff'; }}

@@ -104,8 +104,8 @@ const ChatPanel: React.FC<ChatPanelProps> = ({ roomId, userName, userRole, isOpe
           style={{
             width: '28px', height: '28px',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
-            background: '#fff', border: '2px solid #000', borderRadius: '4px',
-            cursor: 'pointer', boxShadow: '2px 2px 0px #000',
+            background: '#999', border: '2px solid #000', borderRadius: '4px',
+            cursor: 'pointer', boxShadow: '2px 2px 0px #000', color: "#999"
           }}
           onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = '#FF3D57'; }}
           onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = '#fff'; }}

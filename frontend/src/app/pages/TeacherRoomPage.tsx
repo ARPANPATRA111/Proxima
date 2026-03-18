@@ -675,7 +675,7 @@ function TeacherRoomContent() {
                     <div key={p.identity}>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <span style={{ ...IN, fontSize: '13px' }}>{p.identity}</span>
+                          <span style={{ ...IN, fontSize: '13px', color: '#999' }}>{p.identity}</span>
                           {raiseHandStudents.has(p.identity) && <Hand size={14} color="#FF6B35" />}
                         </div>
                         <span style={{ ...SM, fontSize: '12px', fontWeight: 700, color: score >= 70 ? '#00C851' : score >= 40 ? '#FFD600' : '#FF3D57' }}>

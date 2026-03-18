@@ -71,7 +71,7 @@ const PollCreator: React.FC<PollCreatorProps> = ({ isOpen, onClose, onCreatePoll
             style={{
               width: '28px', height: '28px',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              background: '#fff', border: '2px solid #000', borderRadius: '4px',
+              background: '#999', border: '2px solid #000', borderRadius: '4px',
               cursor: 'pointer',
             }}
           >
@@ -89,7 +89,7 @@ const PollCreator: React.FC<PollCreatorProps> = ({ isOpen, onClose, onCreatePoll
               onChange={(e) => setQuestion(e.target.value)}
               placeholder="What is the capital of France?"
               style={{
-                width: '100%', padding: '10px 12px',
+                width: '100%', padding: '10px 12px',color: '#000',
                 border: '2px solid #000', borderRadius: '4px',
                 ...IN, fontSize: '14px', outline: 'none',
                 background: '#FFFBE6', boxSizing: 'border-box',
@@ -118,7 +118,7 @@ const PollCreator: React.FC<PollCreatorProps> = ({ isOpen, onClose, onCreatePoll
                     onChange={(e) => updateOption(idx, e.target.value)}
                     placeholder={`Option ${LETTERS[idx]}`}
                     style={{
-                      flex: 1, padding: '8px 12px',
+                      flex: 1, padding: '8px 12px', background: '#FFFBE6', color: '#000',
                       border: '2px solid #000', borderRadius: '4px',
                       ...IN, fontSize: '13px', outline: 'none',
                       boxSizing: 'border-box',
@@ -147,11 +147,11 @@ const PollCreator: React.FC<PollCreatorProps> = ({ isOpen, onClose, onCreatePoll
                   display: 'flex', alignItems: 'center', gap: '4px',
                   ...SG, fontSize: '12px', fontWeight: 700,
                   padding: '6px 12px', marginTop: '8px',
-                  background: '#fff', border: '2px solid #000', borderRadius: '4px',
+                  background: '#FFD600', border: '2px solid #000', borderRadius: '4px',
                   cursor: 'pointer', boxShadow: '2px 2px 0px #000',
                 }}
                 onMouseEnter={(e) => { (e.currentTarget as HTMLButtonElement).style.background = '#FFD600'; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = '#fff'; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLButtonElement).style.background = '#FFD600'; }}
               >
                 <Plus size={12} /> Add Option
               </button>
@@ -166,10 +166,10 @@ const PollCreator: React.FC<PollCreatorProps> = ({ isOpen, onClose, onCreatePoll
               type="number"
               value={timeoutSec}
               onChange={(e) => setTimeoutSec(Math.max(5, parseInt(e.target.value) || 5))}
-              min={5}
-              max={300}
+              min={10}
+              max={200}
               style={{
-                width: '100px', padding: '8px 12px',
+                width: '100px', padding: '8px 12px',color: '#000',
                 border: '2px solid #000', borderRadius: '4px',
                 ...SM, fontSize: '14px', fontWeight: 700, outline: 'none',
                 textAlign: 'center',
